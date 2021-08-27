@@ -1,8 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@layer components {
+  .h1 {
+    @apply text-4xl font-bold text-black;
+  }
+  .h1-space {
+    @apply tracking-xwide font-semibold text-base text-green-normal;
+  }
+
+  @media screen and (max-width: 680px) {
+    .h1 {
+      @apply text-2xl;
+    }
+
+    .h1-space {
+      @apply tracking-xwide font-semibold text-sm text-green-normal;
+    }
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Poppins, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
